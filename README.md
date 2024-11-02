@@ -28,9 +28,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Translation mechanism with NGX-Translate
 
-# 1
-run this command to install the required library for this component:
-`npm install @ngx-tranlsate/core`
+
+1. 
+run this command to install the required library for this component: `npm install @ngx-tranlsate/core`
 
 this is just for us to be able to grab the translation json with an ajax call if needed
 `npm install @ngx-translate/http-loader`
@@ -38,24 +38,24 @@ this is just for us to be able to grab the translation json with an ajax call if
 also bootstrap for neat css
 `ng add ngx-bootstrap`
 
-# 2 
+2. 
 Then, for isolation purposes we'll create a separate module for translation
 `ng g m translate`
 
 Check the content for that module on translate.module.ts, just copy paste the whole thing
 
-# 3 
+3. 
 As for the translation files they should be put on a json on the path src/assets/i18n/
 
-# 4
+4. 
 Check language-control to see the implementation for the component that changes the language
 
-# 5
+5. 
 For the flags, do this:
 
 `npm install flag-icon-css`
 
-add this entry to your "styles"[] on angular.json
+add this entry to your "styles":[] on angular.json
 
 `"node_modules/flag-icon-css/css/flag-icons.min.css"`
 
