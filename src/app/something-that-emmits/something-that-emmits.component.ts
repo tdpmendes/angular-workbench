@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, output } from '@angular/core';
 
 @Component({
   selector: 'app-something-that-emmits',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './something-that-emmits.component.css'
 })
 export class SomethingThatEmmitsComponent {
+
+  @Output()
+  buttonEvent = new EventEmitter();
+
+  buttonClick(){
+    this.buttonEvent.emit({
+      "name":"buttonClick from something that emmits",
+      "data": "5"
+    });
+  }
 
 }

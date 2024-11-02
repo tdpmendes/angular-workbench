@@ -1,1 +1,6 @@
-<p>something-that-listens works!</p>
+<div class="row">
+    <div class="col-md-12">Event data received</div>
+    <div class="col-md-12">{{eventDataReceived}}</div>    
+
+    <app-something-that-emmits (buttonEvent)="handleButtonEvent($event)"></app-something-that-emmits>
+</div>

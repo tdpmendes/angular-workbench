@@ -26,8 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Translation mechanism with NGX-Translate
-
+## Translation mechanism with ngx-translate
 
 1. 
 run this command to install the required library for this component: `npm install @ngx-tranlsate/core`
@@ -65,7 +64,15 @@ then on your "development": {} settings, add this entry:
 
 if you don't angular will try to put files that have the same name on the folders 1x1 and 4x3 on the same output folder after angular does it's thing when starting the app, and it will crash.
 
+## Communication between a child component and it's parent
 
+In this example i created a small thing to demonstrate how a child component can communicate (and pass messages) to a (an imediate) parent component.
 
+We have, something that emmits, which is the child, and something that listens, which is the parent component.
+The parent component, contains a child component (be aware that we're not taking about inheritance here)
 
+The child component, has a button, that emmits an event to a parent component, and exposes an output event that can be bound via the @Output() annotation.
 
+When you click the button on the child component, it emmits an event that will be listened by something that listens, and it will output the structure for the event on the console log. 
+
+This is how you can have a child component communicate with a parent component! 
