@@ -84,3 +84,11 @@ To have a parent child communication you do it like this:
 2. On the parent component you do [model]="propertyFromParent" when you place the child component on the parent component's html structure. It's really that simple.
 
 3. Be aware that: if you set the data on the parent, you can do so at the constructor, because it happens before all the angular component construction pipeline. On the child you can access the data on the OnInit method, because at this point the data passed will be available on the child event.
+
+## Communication between components that are not part of the same hierarchical structure (via an eventBus)
+
+In this example we have some component, and some other component. To make it so that they are able to pass messages between each other, we can do so by using the Observer/observed Design Pattern. I've created an eventBus.service.ts which is an "universal" form to enable 2 components to communicate. You might want to do this is in a more better typed fashion, for example, having a separate class for Event, with some parameter so that everybody subscribing can filter and treat only events of a certain type, etc. I might update this repository in the future with a typed event bus (or something)
+
+So what you do is this: On the component from where you want to send the message from, you will inject eventBusService on the constructor. Then you create a method to send the event. The event bus i've created will send a message by the set() method.
+
+On the component where you want to listen to the event, you also inject the service, and, on the constructor (or init, does it make a difference? honest question) you will subscribe to that event, do a null check, and treat the event when it's not null. This is the point where you might want to filter the event (by type or anything) and handle the event!

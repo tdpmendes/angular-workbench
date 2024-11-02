@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxTranslateModule } from './tranlsate/tranlsate.module';
 import { SomethingThatEmmitsComponent } from './something-that-emmits/something-that-emmits.component';
 import { SomethingThatListensComponent } from './something-that-listens/something-that-listens.component';
+import { SomeComponentComponent } from './some-component/some-component.component';
+import { SomeOtherComponentComponent } from './some-other-component/some-other-component.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { SomethingThatListensComponent } from './something-that-listens/somethin
     LanguageControlComponent,
     SomethingThatEmmitsComponent,
     SomethingThatListensComponent,
+    SomeComponentComponent,
+    SomeOtherComponentComponent,
   ],
   imports: [
     BrowserModule,
