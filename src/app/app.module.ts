@@ -9,9 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxTranslateModule } from './tranlsate/tranlsate.module';
 import { SomethingThatEmmitsComponent } from './something-that-emmits/something-that-emmits.component';
 import { SomethingThatListensComponent } from './something-that-listens/something-that-listens.component';
-import { CustomDatePickerComponent } from './custom-date-picker/custom-date-picker.component';
-import { CustomInputComponent } from './custom-input/custom-input.component';
-import { CustomSelectComponent } from './custom-select/custom-select.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +16,6 @@ import { CustomSelectComponent } from './custom-select/custom-select.component';
     LanguageControlComponent,
     SomethingThatEmmitsComponent,
     SomethingThatListensComponent,
-    CustomDatePickerComponent,
-    CustomInputComponent,
-    CustomSelectComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,4 @@
-<p>custom-input works!</p>
+<div class="input-group border-bottom" [class]="isInvalid ? 'input-invalid' : '' ">
+    <input [type]="type" class="form-control border-0" [id]="id" [placeholder]="placeholder" [(ngModel)]="value" (input)="onChange(value)">
+    <div *ngIf="isInvalid" class="input-group-text border-0 validation-exclamation">!</div>
+</div>

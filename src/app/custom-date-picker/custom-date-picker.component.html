@@ -1,1 +1,4 @@
-<p>custom-date-picker works!</p>
+<div class="input-group border-bottom" [class]="isInvalid ? 'input-invalid' : '' ">
+    <input class="form-control border-0" [id]="id" type="text" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle();" [(ngModel)]="value" placeholder="Sélectionnez la date" (dateSelect)="onChange(value)">
+    <div *ngIf="isInvalid" class="input-group-text border-0 validation-exclamation">!</div>
+</div>
