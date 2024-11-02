@@ -75,4 +75,12 @@ The child component, has a button, that emmits an event to a parent component, a
 
 When you click the button on the child component, it emmits an event that will be listened by something that listens, and it will output the structure for the event on the console log. 
 
-This is how you can have a child component communicate with a parent component! 
+This is how you can have a child component communicate with a parent component!
+
+To have a parent child communication you do it like this:
+
+1. You need to have an @Input() on a child component, which is the model or event you want to bind to
+
+2. On the parent component you do [model]="propertyFromParent" when you place the child component on the parent component's html structure. It's really that simple.
+
+3. Be aware that: if you set the data on the parent, you can do so at the constructor, because it happens before all the angular component construction pipeline. On the child you can access the data on the OnInit method, because at this point the data passed will be available on the child event.

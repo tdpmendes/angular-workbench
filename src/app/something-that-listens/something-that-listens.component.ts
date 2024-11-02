@@ -5,13 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './something-that-listens.component.html',
   styleUrl: './something-that-listens.component.css'
 })
-export class SomethingThatListensComponent implements OnInit {
+export class SomethingThatListensComponent{
   
-  ngOnInit(): void {
-    
+  eventDataReceived: any
+  dataFromParent: any
+
+  constructor(){
+    this.dataFromParent = {
+      "name": "data from parent",
+      "data": "i was created on the parent"
+    };
+    console.log('event created on parent',this.dataFromParent);
   }
 
-  eventDataReceived: any
 
   handleButtonEvent(event:any){
     this.eventDataReceived = event;

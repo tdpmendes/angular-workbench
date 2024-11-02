@@ -2,5 +2,5 @@
     <div class="col-md-12">Event data received</div>
     <div class="col-md-12">{{eventDataReceived}}</div>    
 
-    <app-something-that-emmits (buttonEvent)="handleButtonEvent($event)"></app-something-that-emmits>
+    <app-something-that-emmits (buttonEvent)="handleButtonEvent($event)" [dataFromParent]="dataFromParent"></app-something-that-emmits>
 </div>
