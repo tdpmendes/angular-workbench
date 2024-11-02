@@ -36,6 +36,7 @@
             ],
             "styles": [
               "src/styles.css"
+              ,"node_modules/flag-icon-css/css/flag-icons.min.css"
             ],
             "scripts": []
           },
@@ -57,6 +58,7 @@
             },
             "development": {
               "optimization": false,
+              "outputHashing": "media",
               "extractLicenses": false,
               "sourceMap": true
             }
@@ -101,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
