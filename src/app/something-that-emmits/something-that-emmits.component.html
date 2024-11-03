@@ -1,4 +1,15 @@
 <div class="row">
-    <label for="button">This button will emit an event</label>
-    <button type="button" class="btn btn-primary" (click)="buttonClick()">I will emit an event</button>
+    <div class="col-md-6">
+        <label for="button">This button will emit an event</label>
+        <button type="button" class="btn btn-primary" (click)="buttonClick()">I will emit an event</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <label>also, some data from the parent</label>
+    </div>
+    <div class="col-md-6">
+        {{dataFromParent?.name}} | {{dataFromParent?.name}} 
+    </div>
 </div>

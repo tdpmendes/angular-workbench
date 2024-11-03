@@ -44,6 +44,9 @@ export let documentDefinition = {
     styles: {
         someStyle:{
             fontSize: 20
+        },
+        footerText:{
+            fontSize: 6
         }
     }
 

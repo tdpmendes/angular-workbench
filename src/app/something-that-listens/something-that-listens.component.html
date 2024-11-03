@@ -1,6 +1,9 @@
-<div class="row">
-    <div class="col-md-12">Event data received</div>
-    <div class="col-md-12">{{eventDataReceived}}</div>    
-
-    <app-something-that-emmits (buttonEvent)="handleButtonEvent($event)" [dataFromParent]="dataFromParent"></app-something-that-emmits>
+<div class="row" style="background-color: aqua;">
+    <div class="col-md-4">
+        <app-something-that-emmits (buttonEvent)="handleButtonEvent($event)" [dataFromParent]="dataFromParent"></app-something-that-emmits>
+    </div>
+    <div class="col-md-3">Event data received:</div>
+    <div class="col-md-3">{{eventDataReceived?.name}}</div>    
+    <div class="col-md-1">{{eventDataReceived?.data}}</div>    
 </div>
+

@@ -6,11 +6,14 @@ import { EventBusService } from '../services/event-bus.service';
   templateUrl: './some-other-component.component.html',
   styleUrl: './some-other-component.component.css'
 })
+
 export class SomeOtherComponentComponent {
+  compData:any;
+
   constructor(private eventBus:EventBusService){
     eventBus.observable$.subscribe(data => {
       if (data){
-        console.log("some other component data received",data);
+        this.compData = data;
       }
     })
   }

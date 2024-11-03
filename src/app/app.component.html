@@ -1,17 +1,24 @@
 
-<ul>
-  <app-language-control></app-language-control>
-</ul>
+<nav class="navbar navbar-default" style="background-color: orange;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Tdpmendes' Angular workbench</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <app-language-control></app-language-control>
+    </ul>
+  </div>
+</nav>
 
-<div>
+<div class="container-fluid">
+  
   <app-something-that-listens></app-something-that-listens>
-</div>
+  
 
-<div>
-  <app-some-component></app-some-component>
-  <app-some-other-component></app-some-other-component>
-</div>
+  <div class="row">
+    <app-some-component></app-some-component>
+    <app-some-other-component></app-some-other-component>
+  </div>
 
-<div>
   <app-pdf-make-example></app-pdf-make-example>
 </div>
