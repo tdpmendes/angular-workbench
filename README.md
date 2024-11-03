@@ -92,3 +92,23 @@ In this example we have some component, and some other component. To make it so 
 So what you do is this: On the component from where you want to send the message from, you will inject eventBusService on the constructor. Then you create a method to send the event. The event bus i've created will send a message by the set() method.
 
 On the component where you want to listen to the event, you also inject the service, and, on the constructor (or init, does it make a difference? honest question) you will subscribe to that event, do a null check, and treat the event when it's not null. This is the point where you might want to filter the event (by type or anything) and handle the event!
+
+## Using PDFMake on Angular
+
+So first we'll install not only pdfmake but it's types (for typescript) so we go;
+
+`npm install pdfmake`
+`npm install @types/pdfmake`
+
+Now, we can use PDFMake with some helpful classes and interfaces, which is gr8.
+
+Then, on the component where we want to print the pdf, we will need some imports and some reference changes, as seen on pdf-make-example.component:
+
+`import pdfMake from 'pdfmake/build/pdfmake';`
+`import pdfFonts from 'pdfmake/build/vfs_fonts';`
+`pdfMake.fonts = pdfFonts.pdfMake;`
+
+Something i like to do as a good pratice is to isolate the document definition on a separate file.
+
+After that, check the pdf-make-example and check the printPdf() method, and you should be set :D
+

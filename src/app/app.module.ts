@@ -11,6 +11,7 @@ import { SomethingThatEmmitsComponent } from './something-that-emmits/something-
 import { SomethingThatListensComponent } from './something-that-listens/something-that-listens.component';
 import { SomeComponentComponent } from './some-component/some-component.component';
 import { SomeOtherComponentComponent } from './some-other-component/some-other-component.component';
+import { PdfMakeExampleComponent } from './pdf-make-example/pdf-make-example.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SomeOtherComponentComponent } from './some-other-component/some-other-c
     SomethingThatListensComponent,
     SomeComponentComponent,
     SomeOtherComponentComponent,
+    PdfMakeExampleComponent,
   ],
   imports: [
     BrowserModule,
