@@ -112,3 +112,31 @@ Something i like to do as a good pratice is to isolate the document definition o
 
 After that, check the pdf-make-example and check the printPdf() method, and you should be set :D
 
+## Bootstrap and angular
+
+First let's install a few things:
+`npm install bootstrap bootstrap-icons`
+`npm install @ng-bootstrap/ng-bootstrap`
+`npm install ngx-bootstrap`
+
+And we add these entries to angular.json files:
+```
+    "styles": [
+        "node_modules/bootstrap/dist/css/bootstrap.css"
+        ,"node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    ],
+    "scripts": [
+        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ]
+```
+As an extra we can add some imports to our app.module.ts:
+
+`
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+imports: [
+  BrowserModule,
+  NgbModule,
+  AppRoutingModule,
+],
+`

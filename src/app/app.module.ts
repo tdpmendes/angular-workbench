@@ -12,6 +12,8 @@ import { SomethingThatListensComponent } from './something-that-listens/somethin
 import { SomeComponentComponent } from './some-component/some-component.component';
 import { SomeOtherComponentComponent } from './some-other-component/some-other-component.component';
 import { PdfMakeExampleComponent } from './pdf-make-example/pdf-make-example.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { PdfMakeExampleComponent } from './pdf-make-example/pdf-make-example.com
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     AppRoutingModule,
     CommonModule,
     HttpClientModule,
