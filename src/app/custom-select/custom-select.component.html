@@ -1,6 +1,6 @@
 <div class="input-group border-bottom" [class]="isInvalid ? 'input-invalid' : '' ">
     <select class="form-control form-select border-0" [disabled]="disabled" [id]="id" [(ngModel)]="value" (change)="onChange(value)">
-        <option value="">Sélectionnez une option</option>
+        <option value="">Select an option</option>
         <option *ngFor="let item of options; index as i;" [selected]="default === item.value ? true : false" [value]="item.value">{{item.label}}</option>
     </select>
     <div *ngIf="isInvalid" class="input-group-text border-0 validation-exclamation">!</div>

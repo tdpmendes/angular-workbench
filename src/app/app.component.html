@@ -13,7 +13,6 @@
 <div class="container-fluid">
   
   <app-something-that-listens></app-something-that-listens>
-  
 
   <div class="row">
     <app-some-component></app-some-component>
@@ -21,4 +20,44 @@
   </div>
 
   <app-pdf-make-example></app-pdf-make-example>
+
+
+  <div class="row">
+    <div class="col-md-12" style="background-color: yellowgreen;">
+
+      Some custom inputs i've done: <br><br>
+      <div class="form-group">
+        <label for="custom-input"> This is a custom input check the attributes to see how to use it: 
+          <app-custom-input 
+          [(ngModel)] = "customInputModel"
+          [type]="'text'"
+          [isInvalid]="customInputModel == ''"
+          [id]="'custom-input'">
+          </app-custom-input>
+        </label>
+      </div>
+  
+      <div class="form-group">
+        <label for="custom-select">This is a custom select check the attributes to see how to use it:
+          <app-custom-select
+          [options]="getSomeOptions()"
+          [(ngModel)]="customSelectModel"
+          [isInvalid]="!customSelectModel"
+          [default]="''"
+          [id]="'custom-select'">
+          </app-custom-select>
+        </label>
+      </div>
+  
+      <div class="form-group">
+        <label for="custom-datepicker">This is a custom datepicker check the attributes to see how to use it:
+          <app-custom-date-picker
+          [(ngModel)]="customDatepickerDate"
+          [isInvalid]="!customDatepickerDate"
+          [id]="'custom-datepicker'"
+          ></app-custom-date-picker>
+        </label>
+      </div>
+    </div>
+  </div>
 </div>

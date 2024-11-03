@@ -13,6 +13,10 @@ import { SomeComponentComponent } from './some-component/some-component.componen
 import { SomeOtherComponentComponent } from './some-other-component/some-other-component.component';
 import { PdfMakeExampleComponent } from './pdf-make-example/pdf-make-example.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomInputComponent } from "./custom-input/custom-input.component";
+import { FormsModule } from '@angular/forms';
+import { CustomSelectComponent } from "./custom-select/custom-select.component";
+import { CustomDatePickerComponent } from "./custom-date-picker/custom-date-picker.component";
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     HttpClientModule,
     NgxTranslateModule,
-  ],
+    FormsModule,
+    CustomInputComponent,
+    CustomSelectComponent,
+    CustomDatePickerComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })

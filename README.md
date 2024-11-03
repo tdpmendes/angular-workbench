@@ -140,3 +140,7 @@ imports: [
   AppRoutingModule,
 ],
 `
+
+## Some custom components i've done
+
+I have implemented a custom datepicker, input and select with some validation logic check app-component.html to see how to use it
