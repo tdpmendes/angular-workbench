@@ -28,8 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Translation mechanism with ngx-translate
 
-1. 
-run this command to install the required library for this component: `npm install @ngx-tranlsate/core`
+1. run this command to install the required library for this component: `npm install @ngx-tranlsate/core`
 
 this is just for us to be able to grab the translation json with an ajax call if needed
 `npm install @ngx-translate/http-loader`
@@ -37,20 +36,16 @@ this is just for us to be able to grab the translation json with an ajax call if
 also bootstrap for neat css
 `ng add ngx-bootstrap`
 
-2. 
-Then, for isolation purposes we'll create a separate module for translation
+2. Then, for isolation purposes we'll create a separate module for translation
 `ng g m translate`
 
 Check the content for that module on translate.module.ts, just copy paste the whole thing
 
-3. 
-As for the translation files they should be put on a json on the path src/assets/i18n/
+3. As for the translation files they should be put on a json on the path src/assets/i18n/
 
-4. 
-Check language-control to see the implementation for the component that changes the language
+4. Check language-control to see the implementation for the component that changes the language
 
-5. 
-For the flags, do this:
+5. For the flags, do this:
 
 `npm install flag-icon-css`
 
@@ -104,10 +99,11 @@ Now, we can use PDFMake with some helpful classes and interfaces, which is gr8.
 
 Then, on the component where we want to print the pdf, we will need some imports and some reference changes, as seen on pdf-make-example.component:
 
-`import pdfMake from 'pdfmake/build/pdfmake';`
-`import pdfFonts from 'pdfmake/build/vfs_fonts';`
-`pdfMake.fonts = pdfFonts.pdfMake;`
-
+```
+import pdfMake from 'pdfmake/build/pdfmake';
+import pdfFonts from 'pdfmake/build/vfs_fonts';
+pdfMake.fonts = pdfFonts.pdfMake;
+```
 Something i like to do as a good pratice is to isolate the document definition on a separate file.
 
 After that, check the pdf-make-example and check the printPdf() method, and you should be set :D
@@ -131,7 +127,7 @@ And we add these entries to angular.json files:
 ```
 As an extra we can add some imports to our app.module.ts:
 
-`
+```
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 imports: [
@@ -139,7 +135,7 @@ imports: [
   NgbModule,
   AppRoutingModule,
 ],
-`
+```
 
 ## Some custom components i've done
 
