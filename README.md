@@ -59,6 +59,8 @@ then on your "development": {} settings, add this entry:
 
 if you don't angular will try to put files that have the same name on the folders 1x1 and 4x3 on the same output folder after angular does it's thing when starting the app, and it will crash.
 
+Also, if we need to listen to language change events, we need to inject TranslateService, and subscribe to the event. The event object contains the current language and the json containing all keys.
+
 ## Communication between a child component and it's parent
 
 In this example i created a small thing to demonstrate how a child component can communicate (and pass messages) to a (an imediate) parent component.
